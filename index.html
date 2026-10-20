@@ -18,8 +18,8 @@
     --orange:    #EF700B;
     --orange-soft: rgba(239,112,11,0.08);
     --gray-brand: #7A7A7A;
-    --blue:      #1E5FD9;
-    --blue-soft: rgba(30,95,217,0.08);
+    --blue:      #044cba;
+    --blue-soft: rgba(4,76,186,0.08);
     --hairline:  rgba(0,0,0,0.09);
     --hairline-2: rgba(0,0,0,0.05);
   }
@@ -141,6 +141,62 @@
   .invest-total .it-label{font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:6px;}
   .invest-total .it-val{font-size:30px; font-weight:800;}
 
+  /* ---------- parceria mei ---------- */
+  .mei-card{
+    background:linear-gradient(135deg, var(--blue) 0%, #0a2f73 100%);
+    color:#fff; border-radius:22px; padding:40px 36px;
+    display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center;
+  }
+  @media (max-width:700px){.mei-card{grid-template-columns:1fr;}}
+  .mei-card .mc-tag{font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:10px;}
+  .mei-card h3{font-size:24px; font-weight:800; margin:0 0 12px;}
+  .mei-card p{color:rgba(255,255,255,0.85); font-size:15px; max-width:480px; margin:0 0 18px;}
+  .mei-card .mc-link{
+    display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none;
+    font-size:14px; font-weight:700; border-bottom:2px solid rgba(255,255,255,0.5);
+  }
+  .mei-card .mc-link:hover{border-color:#fff;}
+  .avatar-row{display:flex; align-items:center;}
+  .avatar-row .av{
+    width:56px; height:56px; border-radius:50%; border:3px solid rgba(255,255,255,0.9);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:18px;
+    margin-left:-16px; color:#fff;
+  }
+  .avatar-row .av:first-child{margin-left:0;}
+  .avatar-row .av.a1{background:#ff8c42;}
+  .avatar-row .av.a2{background:#4fb0ff;}
+  .avatar-row .av.a3{background:#6fcf97;}
+  .avatar-row .av.plus{background:rgba(255,255,255,0.18); font-size:14px;}
+
+  /* ---------- cronograma ---------- */
+  .timeline{position:relative; padding:20px 0 8px; margin-bottom:8px;}
+  .timeline .t-line{
+    position:absolute; top:46px; left:4%; right:4%; height:3px; background:var(--hairline);
+  }
+  .timeline .t-line .t-fill{height:100%; background:linear-gradient(90deg, var(--orange), var(--blue)); width:100%;}
+  .timeline-steps{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; position:relative;}
+  @media (max-width:760px){.timeline-steps{grid-template-columns:1fr; gap:36px;} .timeline .t-line{display:none;}}
+  .t-step{text-align:center;}
+  @media (max-width:760px){.t-step{text-align:left; display:flex; gap:16px; align-items:flex-start;}}
+  .t-step .t-dot{
+    width:38px; height:38px; border-radius:50%; background:#fff; border:3px solid var(--orange);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; color:var(--orange);
+    margin:0 auto 16px; position:relative; z-index:2;
+  }
+  .t-step:nth-child(2) .t-dot{border-color:var(--gray-brand); color:var(--gray-brand);}
+  .t-step:nth-child(3) .t-dot{border-color:var(--blue); color:var(--blue);}
+  @media (max-width:760px){.t-step .t-dot{margin:0; flex:0 0 auto;}}
+  .t-step .t-day{font-size:12px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px;}
+  .t-step h4{font-size:16px; margin:0 0 8px;}
+  .t-step p{font-size:13.5px; margin:0;}
+
+  .content-stats{display:flex; gap:16px; flex-wrap:wrap; margin-top:36px;}
+  .cs-item{
+    flex:1 1 160px; background:#fff; border:1px solid var(--hairline); border-radius:14px; padding:20px 22px; text-align:center;
+  }
+  .cs-item .cs-val{font-size:30px; font-weight:800; color:var(--orange);}
+  .cs-item .cs-label{font-size:12.5px; color:var(--ink-faint); margin-top:4px;}
+
   /* ---------- footer / cta ---------- */
   .closing{
     background:var(--ink); color:#fff; padding:96px 0; text-align:center;
@@ -256,6 +312,67 @@
         <summary>Como funciona na prática</summary>
         <div class="more-body">Duas campanhas rodando em paralelo: uma atraindo cliente final pra abertura de MEI (direcionada pro sistema que a Vicmar já tem pronto), e outra atraindo empresas que precisam de um escritório de contabilidade completo. São públicos diferentes, com anúncios e mensagens diferentes.</div>
       </details>
+    </div>
+  </div>
+</section>
+
+<section id="parceria-mei">
+  <div class="wrap reveal">
+    <p class="kicker blue">O destino do tráfego de MEI</p>
+    <h2 class="title">O sistema já existe — falta tráfego</h2>
+    <p class="section-intro">A Vicmar já tem uma plataforma própria e funcional pra fechar aberturas de MEI. Em vez de criar algo do zero pra essa frente, vamos levar público qualificado direto pra ela.</p>
+    <div class="mei-card">
+      <div>
+        <div class="mc-tag">Sistema já ativo</div>
+        <h3>Parceria MEI</h3>
+        <p>"Seu negócio, nossa parceria." Plataforma própria onde o cliente final abre o MEI direto pelo app, já integrada ao fluxo da Vicmar — só falta tráfego qualificado chegando até ela.</p>
+        <a class="mc-link" href="https://www.parceriamei.com.br/" target="_blank" rel="noopener">parceriamei.com.br ↗</a>
+      </div>
+      <div class="avatar-row">
+        <div class="av a1">MEI</div>
+        <div class="av a2">PM</div>
+        <div class="av a3">+</div>
+        <div class="av plus">você</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="cronograma">
+  <div class="wrap reveal">
+    <p class="kicker">Cronograma</p>
+    <h2 class="title">Como a implementação acontece</h2>
+    <p class="section-intro">Primeiro constrói presença, depois liga o tráfego pago — assim o anúncio não manda ninguém pra um perfil vazio.</p>
+
+    <div class="timeline">
+      <div class="t-line"><div class="t-fill"></div></div>
+      <div class="timeline-steps">
+        <div class="t-step">
+          <div class="t-dot">1</div>
+          <div class="t-day">Dias 1–40</div>
+          <h4>Produção e distribuição de conteúdo</h4>
+          <p>Publicação de 9 imagens e 3 vídeos nas redes sociais da Vicmar, criadas do zero, junto com a estruturação completa do Google Meu Negócio.</p>
+        </div>
+        <div class="t-step">
+          <div class="t-dot">2</div>
+          <div class="t-day">Dias 41–60</div>
+          <h4>Ajuste e preparação</h4>
+          <p>Análise do que performou melhor no conteúdo orgânico pra calibrar as campanhas de anúncio antes de escalar com verba paga.</p>
+        </div>
+        <div class="t-step">
+          <div class="t-dot">3</div>
+          <div class="t-day">A partir do dia 60</div>
+          <h4>Gestão de tráfego pago contínua</h4>
+          <p>Anúncios rodando no Google Meu Negócio e nas redes sociais — frente institucional e frente Parceria MEI, de forma contínua.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-stats">
+      <div class="cs-item"><div class="cs-val">9</div><div class="cs-label">imagens de conteúdo</div></div>
+      <div class="cs-item"><div class="cs-val">3</div><div class="cs-label">vídeos</div></div>
+      <div class="cs-item"><div class="cs-val">40+</div><div class="cs-label">dias de distribuição</div></div>
+      <div class="cs-item"><div class="cs-val">2x</div><div class="cs-label">publicações por semana</div></div>
     </div>
   </div>
 </section>
